@@ -1,8 +1,13 @@
 <script>
+import { EventHandle } from '@/components';
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: { EventHandle }
 }
 </script>
 <template>
-  <div>Home View</div>
+  <div>
+    <h1>Home View</h1>
+    <EventHandle />
+  </div>
 </template>
