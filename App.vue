@@ -13,7 +13,6 @@ export default {
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">About</RouterLink>
     </div>
-
     <router-view></router-view>
   </div>
 </template>

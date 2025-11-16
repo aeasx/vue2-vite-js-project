@@ -1,13 +1,14 @@
 <script>
-import { EventHandle } from '@/components';
+import { EventHandle, StyleBind } from '@/components';
 export default {
   name: 'Home',
-  components: { EventHandle }
+  components: { EventHandle, StyleBind }
 }
 </script>
 <template>
   <div>
     <h1>Home View</h1>
     <EventHandle />
+    <StyleBind />
   </div>
 </template>
