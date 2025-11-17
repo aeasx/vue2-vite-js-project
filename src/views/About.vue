@@ -1,8 +1,15 @@
 <script>
+import { MyModal } from '@/components';
 export default {
-  name: 'About'
+  name: 'About',
+  components: {
+    'my-modal': MyModal
+  }
 }
 </script>
 <template>
-  <div>你好</div>
+  <div>
+    <div>你好</div>
+    <my-modal />
+  </div>
 </template>

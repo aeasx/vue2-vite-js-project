@@ -10,9 +10,15 @@ export default {
   computed: {
     storeItems() {
       return this.$store.state.items
-    }
+    },
+    doneTodos() {
+      return this.$store.getters.doneTodos
+    },
   },
   methods: {
+    todoById(id) {
+      return this.$store.getters.getTodoById(id)
+    }
   }
 }
 </script>
@@ -20,5 +26,8 @@ export default {
   <div>
     <h1>Home View</h1>
     <div>{{ storeItems }}</div>
+    <p>doneTodosCount: {{ JSON.stringify(doneTodos, null, 2) }}</p>
+    <el-divider />
+    <p>{{ todoById(2) }}</p>
   </div>
 </template>
