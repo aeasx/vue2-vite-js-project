@@ -29,5 +29,6 @@ export default {
     <p>doneTodosCount: {{ JSON.stringify(doneTodos, null, 2) }}</p>
     <el-divider />
     <p>{{ todoById(2) }}</p>
+    <my-poster posterTitle="global register poster components" />
   </div>
 </template>
