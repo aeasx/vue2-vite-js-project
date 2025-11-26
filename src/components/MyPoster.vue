@@ -1,11 +1,19 @@
 <script>
 export default {
   name: 'my-poster',
+  // define property names and types 
   props: {
-    posterTitle: {
+    title: {
       type: String,
       required: true
-    }
+    },
+    likes: Number,
+    isPublished: Boolean,
+    comments: Array,
+    commentIds: Array,
+    author: Object,
+    callback: Function,
+    contactPromise: Promise
   },
   data: function () {
     return {
@@ -16,7 +24,9 @@ export default {
 </script>
 <template>
   <div>
-    <h1>my-poster</h1>
-    <div>{{ posterTitle }}</div>
+    <div>title: {{ title }}</div>
+    <div>likes: {{ likes }}</div>
+    <div>isPublished: {{ isPublished }}</div>
+    <div>commentIds: {{ commentIds }}</div>
   </div>
 </template>

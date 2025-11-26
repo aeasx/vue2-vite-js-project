@@ -11,6 +11,6 @@ export default {
 <template>
   <div>
     <div>你好</div>
-    <my-poster poster-title="posterTitle Props" />
+    <my-poster title="my journey with vue" />
   </div>
 </template>
