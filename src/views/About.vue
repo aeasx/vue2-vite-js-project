@@ -1,45 +1,37 @@
 <script>
-import { MyPoster, ButtonCounter, ListRender, CustomerInput } from "@/components";
 import { faker } from "@faker-js/faker";
+import { LovingModel, TxtDocument, BoostrapDateInput } from "@/components";
 export default {
   name: 'About',
   // 局部注册组件
   components: {
-    'my-poster': MyPoster,
-    'button-counter': ButtonCounter,
-    'list-render': ListRender,
-    'customer-input': CustomerInput,
+    'loving_model': LovingModel,
+    'txt_document': TxtDocument,
+    'boostrap_date_input': BoostrapDateInput
   },
   data: function () {
     return {
-      posts: [
-        { id: 1, title: 'My journey with Vue', content: faker.lorem.sentence() },
-        { id: 2, title: 'Blogging with Vue', content: faker.lorem.sentence() },
-        { id: 3, title: 'Why Vue is so fun', content: faker.lorem.sentence() }
-      ],
-      postFontSize: 1.2,
-      answer: '',
-      tabs: ["button-counter", "list-render", "customer-input"],
-      currentTab: 'button-counter'
+      lovingVue: true,
+      sentence: faker.lorem.sentence(),
     }
   },
   computed: {
+
   },
   methods: {
-    onHandleEnlarge: function (size, ...args) {
-      this.postFontSize += size;
-      console.log(args);
-    },
+    handleUpdateDoc: function () {
+      this.sentence = faker.lorem.paragraphs();
+    }
   }
 }
 </script>
 <template>
   <div>
     <div>你好</div>
-    <div class="tabs">
-      <button v-for="tab in tabs" @click="currentTab = tab">{{ tab }}</button>
-    </div>
-    <component :is="currentTab" />
+    <loving_model v-model="lovingVue" />
+    <div>{{ lovingVue }}</div>
+    <txt_document :doc="sentence" v-on:update:doc="handleUpdateDoc" />
+    <boostrap_date_input />
   </div>
 </template>
 

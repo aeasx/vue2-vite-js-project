@@ -12,8 +12,6 @@ export default {
 </script>
 <template>
   <div>
-    <div class="header_title">{{ post.title }}</div>
-    <p class="header_title">{{ post.content }}</p>
     <button @click="$emit('enlargeSize', 0.2, 0.3, 0.4, 0.5)">enlarge fontSize</button>
   </div>
 </template>
