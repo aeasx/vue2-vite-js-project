@@ -28,10 +28,14 @@ export default {
 <template>
   <div>
     <div>你好</div>
+<<<<<<< HEAD
     <loving_model v-model="lovingVue" />
     <div>{{ lovingVue }}</div>
     <txt_document :doc="sentence" v-on:update:doc="handleUpdateDoc" />
     <boostrap_date_input />
+=======
+    <my-poster title="my journey with vue" />
+>>>>>>> 1a50e1913eef735f2bdfee531b9dabb3aa2bd9f3
   </div>
 </template>
 
