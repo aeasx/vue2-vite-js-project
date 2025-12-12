@@ -7,6 +7,12 @@ import store from '@/store'
 import { MyPoster } from '@/components'
 import '@/style.css'
 Vue.use(ElementUI)
+
+Vue.prototype.$ELEMENT = {
+  size: 'small',
+  zIndex: 2000
+}
+
 // global registet components
 Vue.component('my-poster', MyPoster)
 new Vue({

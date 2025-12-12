@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [createVuePlugin()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')  // 设置路径别名
+      '@': path.resolve(__dirname, './src'),  // 设置路径别名
+      '~': path.resolve(__dirname, './')
     },
     extensions: ['.vue', '.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']  // 省略导入后缀[7](@ref)
   },
